@@ -52,7 +52,7 @@ def main():
 
     # Call the Admin SDK Directory API
     print('Getting the first 10 users in the domain')
-    results = service.users().list(customer='my_customer', maxResults=10,
+    results = service.users().list(customer='my_customer', maxResults=100,
                                    orderBy='email').execute()
     users = results.get('users', [])
 
